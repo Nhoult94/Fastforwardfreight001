@@ -66,8 +66,8 @@ export default function MultiStepFreightForm() {
   };
 
   const calculateTotalCost = (freight: number): number => {
-    let pickupCost = formData.selfDropToWarehouse ? 0 : 90;
-    let handlingCost = 50;
+    const pickupCost = formData.selfDropToWarehouse ? 0 : 90;
+    const handlingCost = 50;
     let deliveryCost = 0;
 
     const majorCities = ["Auckland", "Wellington", "Christchurch", "Sydney", "Melbourne", "Brisbane"];
@@ -180,7 +180,7 @@ export default function MultiStepFreightForm() {
               <div>
                 <label className="block text-sm font-medium text-black mb-1">Preferred Shipping Date</label>
                 <Input name="date" type="date" value={formData.date} onChange={handleChange} />
-                <p className="text-sm text-white mt-1">Preferred shipping date — when you'd like your goods to leave China.</p>
+                <p className="text-sm text-white mt-1">Preferred shipping date — when you&apos;d like your goods to leave China.</p>
               </div>
               <div>
                 <label className="block text-sm font-medium text-black mb-1">Commodity Description</label>
